@@ -39,6 +39,9 @@ let burgerFive = new menuItem('Quatro quesos',
     'lactose & eggs',
     "https://media.giphy.com/media/l4Ki5FgQxmVUfkOvC/giphy.gif");
 
+document.getElementById("myID").innerHTML = "Välj en burgare";
+
+
 console.log(burgerOne.info());
 console.log(burgerTwo.info());
 console.log(burgerThree.info());

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+body {
+    font-family: Abel;
+    font-size: 1.1em;
+    margin: 0 auto;
+}
+
+.allergi {
+    font-weight: bold;
+}
+
+#burgerinfo {
+    background-color: #000000;
+    color: #ffffff;
+    border: 20px dotted #fadadf;
+    padding: 10px;
+}
+
+#customerinfo {
+    border: 20px double lightgreen;
+    padding: 10px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #fadadf;
+    cursor: pointer;
+}
+
+section {
+    margin: 20px;
+}
+
+.header {
+    margin: 0 auto;
+    height: 250px;
+    overflow: hidden;
+}
+
+#heading {
+    position: absolute;
+    padding-left: 50px;
+    padding-top: 50px;
+    z-index: 1000;
+}
+
+#burgerpic {
+    opacity: 0.5;
+    height: auto;
+    width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 100px;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.burgerone {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.burgertwo {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.burgerthree {
+    grid-column: 3;
+    grid-row: 1;
+}

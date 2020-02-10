@@ -8,4 +8,9 @@ const vm = new Vue({
     data: chickenBurger
 })
 
-console.log(vm.info());
+const vm = new Vue({
+    el: '#myID',
+    data: {
+        arbitraryVariableName: 'Välj en burgare'
+    }
+})
