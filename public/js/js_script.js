@@ -39,11 +39,8 @@ let burgerFive = new menuItem('Quatro quesos',
     'lactose & eggs',
     "https://media.giphy.com/media/l4Ki5FgQxmVUfkOvC/giphy.gif");
 
-document.getElementById("myID").innerHTML = "Välj en burgare";
-
-
-console.log(burgerOne.info());
-console.log(burgerTwo.info());
-console.log(burgerThree.info());
-console.log(burgerFour.info());
-console.log(burgerFive.info());
+document.getElementById("burgareOne").innerHTML = burgerOne.name;
+document.getElementById("burgareTwo").innerHTML = burgerTwo.name;
+document.getElementById("burgareThree").innerHTML = burgerThree.name;
+document.getElementById("burgareFour").innerHTML = burgerFour.name;
+document.getElementById("burgareFive").innerHTML = burgerFive.name;
