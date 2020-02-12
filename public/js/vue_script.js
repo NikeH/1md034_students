@@ -39,38 +39,12 @@ let burgerFive = new menuItem('Quatro quesos',
     'lactose & eggs',
     "https://media.giphy.com/media/l4Ki5FgQxmVUfkOvC/giphy.gif");
 
+let menu = [burgerOne, burgerTwo, burgerThree, burgerFour, burgerFive]
+
 
 const vm = new Vue({
-    el: '#burgareOne',
+    el: '#menuID',
     data: {
-        variabel: burgerOne.name
-    }
-})
-
-const vm2 = new Vue({
-    el: '#burgareTwo',
-    data: {
-        variabel: burgerTwo.name
-    }
-})
-
-const vm3 = new Vue({
-    el: '#burgareThree',
-    data: {
-        variabel: burgerThree.name
-    }
-})
-
-const vm4 = new Vue({
-    el: '#burgareFour',
-    data: {
-        variabel: burgerFour.name
-    }
-})
-
-const vm5 = new Vue({
-    el: '#burgareFive',
-    data: {
-        variabel: burgerFive.name
+        menu: menu
     }
 })

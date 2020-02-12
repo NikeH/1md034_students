@@ -39,8 +39,19 @@ let burgerFive = new menuItem('Quatro quesos',
     'lactose & eggs',
     "https://media.giphy.com/media/l4Ki5FgQxmVUfkOvC/giphy.gif");
 
-document.getElementById("burgareOne").innerHTML = burgerOne.name;
-document.getElementById("burgareTwo").innerHTML = burgerTwo.name;
-document.getElementById("burgareThree").innerHTML = burgerThree.name;
-document.getElementById("burgareFour").innerHTML = burgerFour.name;
-document.getElementById("burgareFive").innerHTML = burgerFive.name;
+let menu = [burgerOne, burgerTwo, burgerThree, burgerFour, burgerFive]
+
+let myElement = document.getElementById("menuID");
+
+
+for (let burger in menu) {
+
+    if (menu[burger].allergies == "gluten & nuts") {
+        let listItem = document.createElement("li")
+        let nodeItem = document.createTextNode(menu[burger].name + ' ' + menu[burger].allergies)
+        console.log(menu[burger])
+
+        listItem.appendChild(nodeItem)
+        myElement.appendChild(listItem)
+    }
+}
