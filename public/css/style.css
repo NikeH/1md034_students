@@ -9,7 +9,7 @@ body {
     font-weight: bold;
 }
 
-#burgerinfo {
+#wrapper {
     background-color: #000000;
     color: #ffffff;
     border: 20px dotted #fadadf;

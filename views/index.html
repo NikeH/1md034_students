@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://vuejs.org/js/vue.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
 </head>
@@ -22,16 +23,19 @@
             <div id="burgers">
                 <div v-for="item in menu">
                     <p>{{item.name}}</p>
-                    <img v-bind:src="item.image">
+                    <img v-bind:src="item.img">
                     <ul>
                         <li>
                             {{item.ingredients}}
                         </li>
-                        <li>
-                            {{item.allergies}}
+                        <li v-if="item.lactose == true">
+                            <p>lactose</p>
+                        </li>
+                        <li v-if="item.gluten == true">
+                            <p>gluten</p>
                         </li>
                         <li>
-                            {{item.kcal}}
+                            {{item.kCal}} kCal
                         </li>
 
                     </ul>
@@ -41,7 +45,7 @@
 
             </div>
         </section>
-        <section id=" customerinfo ">
+        <section id="customerinfo">
             <h3>Customer Information</h3>
             <p>This is where you provide necessary information</p>
             <h4>Delivery information</h4>
