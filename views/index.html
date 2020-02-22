@@ -6,8 +6,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://vuejs.org/js/vue.js"></script>
-    <script src="js/js_script.js"></script>
-    <script src="js/vue_script.js"></script>
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer></script>
 </head>
 
 <body>
@@ -16,68 +16,59 @@
             <h1 id="heading">Welcome to BurgerOnline</h1>
             <img src="burger.jpg" alt="food" id="burgerpic">
         </header>
-        <section id="burgerinfo">
+        <section id="wrapper">
             <h3>Select Burger</h3>
             <p>This is where you execute burger selection</p>
-            <div class="wrapper">
-                <div class="burgerone">
-                    <p>Crispy no chicken
-                    </p>
-                    <img src="https://media.giphy.com/media/66e8QBYiL0COs/giphy.gif" alt="crispy burher" title="crispy no chicken burger" width="100">
+            <div id="burgers">
+                <div v-for="item in menu">
+                    <p>{{item.name}}</p>
+                    <img v-bind:src="item.image">
                     <ul>
-                        <li>vegan</li>
-                        <li>750 kcal</li>
-                        <li>contains <span class="allergi">gluten & nuts</span></li>
+                        <li>
+                            {{item.ingredients}}
+                        </li>
+                        <li>
+                            {{item.allergies}}
+                        </li>
+                        <li>
+                            {{item.kcal}}
+                        </li>
+
                     </ul>
+
                 </div>
-                <div class="burgertwo">
-                    <p>Plant beef</p>
-                    <img src="https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif" alt="plant burger" title="plant beef" width="100">
-                    <ul>
-                        <li>veggie</li>
-                        <li>690 kcal</li>
-                        <li>contains <span class="allergi">soy & nuts</span></li>
-                    </ul>
-                </div>
-                <div class="burgerthree">
-                    <p>Halloumi burger</p>
-                    <img src="https://media.giphy.com/media/yoJC2JdQQSQA3PWovu/giphy.gif" alt="halloumi burger" title="halloumi burger" width="100">
-                    <ul>
-                        <li>veggie</li>
-                        <li>780 kcal</li>
-                        <li>contains <span class="allergi">gluten & eggs</span></li>
-                    </ul>
-                </div>
+
+
             </div>
         </section>
-        <section id="customerinfo">
+        <section id=" customerinfo ">
             <h3>Customer Information</h3>
             <p>This is where you provide necessary information</p>
             <h4>Delivery information</h4>
             <form>
                 <p>
 
-                    <label for="firstlastname">Full name</label><br>
-                    <input type="text" id="firstlastname" name="fln" required="required" placeholder="First-and Lastname">
+                    <label for="firstlastname ">Full name</label><br>
+                    <input type="text " id="firstlastname " name="fln " required="required " placeholder="First-and Lastname ">
                 </p>
                 <p>
-                    <label for="email">E-mail</label><br>
-                    <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
-                </p>
-                <p>
-
-                    <label for="streetname">Street</label><br>
-                    <input type="text" id="streetname" name="st" required="required" placeholder="Street name">
+                    <label for="email ">E-mail</label><br>
+                    <input type="email " id="email " name="em " required="required " placeholder="E-mail address ">
                 </p>
                 <p>
 
-                    <label for="housenr">House</label><br>
-                    <input type="number" id="housenr" name="hn" required="required" placeholder="House number">
+                    <label for="streetname ">Street</label><br>
+                    <input type="text " id="streetname " name="st " required="required " placeholder="Street name ">
                 </p>
                 <p>
 
-                    <label for="payment">Payment options</label><br>
-                    <select name="pym" id="payment">
+                    <label for="housenr ">House</label><br>
+                    <input type="number " id="housenr " name="hn " required="required " placeholder="House number ">
+                </p>
+                <p>
+
+                    <label for="payment ">Payment options</label><br>
+                    <select name="pym " id="payment ">
                         <option selected>Credit card</option>
                         <option>Paypal</option>
                         <option>Apple pay</option>
@@ -86,13 +77,13 @@
                     </select>
                 </p>
                 <p>
-                    <label for="gender">Gender</label><br>
-                    <input type="radio" name="gender" value="female">Female<br>
-                    <input type="radio" name="gender" value="male"> Male<br>
-                    <input type="radio" name="gender" value="nonbinary"> Non-binary<br>
-                    <input type="radio" name="gender" value="ndisclosed" checked>Undisclosed
+                    <label for="gender ">Gender</label><br>
+                    <input type="radio " name="gender " value="female ">Female<br>
+                    <input type="radio " name="gender " value="male "> Male<br>
+                    <input type="radio " name="gender " value="nonbinary "> Non-binary<br>
+                    <input type="radio " name="gender " value="ndisclosed " checked>Undisclosed
                 </p>
-                <button type="submit"><img src="https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif" width="6%"/>Place my order</button>
+                <button type="submit "><img src="https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif " width="6% "/>Place my order</button>
 
             </form>
 

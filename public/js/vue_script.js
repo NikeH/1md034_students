@@ -39,12 +39,12 @@ let burgerFive = new menuItem('Quatro quesos',
     'lactose & eggs',
     "https://media.giphy.com/media/l4Ki5FgQxmVUfkOvC/giphy.gif");
 
-let menu = [burgerOne, burgerTwo, burgerThree, burgerFour, burgerFive]
+let menuArray = [burgerOne, burgerTwo, burgerThree, burgerFour, burgerFive]
 
 
 const vm = new Vue({
-    el: '#menuID',
+    el: '#burgers',
     data: {
-        menu: menu
+        menu: menuArray
     }
 })

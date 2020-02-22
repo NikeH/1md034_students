@@ -1,4 +1,4 @@
-function menuItem(name, ingredients, kcal, allergies, image) {
+/*function menuItem(name, ingredients, kcal, allergies, image) {
     this.name = name
     this.ingredients = ingredients;
     this.kcal = kcal;
@@ -41,17 +41,43 @@ let burgerFive = new menuItem('Quatro quesos',
 
 let menu = [burgerOne, burgerTwo, burgerThree, burgerFour, burgerFive]
 
-let myElement = document.getElementById("menuID");
 
 
 for (let burger in menu) {
 
-    if (menu[burger].allergies == "gluten & nuts") {
-        let listItem = document.createElement("li")
-        let nodeItem = document.createTextNode(menu[burger].name + ' ' + menu[burger].allergies)
-        console.log(menu[burger])
+    {
+        let myElement = document.getElementById("burgers");
 
-        listItem.appendChild(nodeItem)
-        myElement.appendChild(listItem)
+        console.log(myElement)
+        let burgerDiv = document.createElement("div")
+
+        let burgerP = document.createElement("p")
+        let burgerName = document.createTextNode(menu[burger].name)
+        burgerP.appendChild(burgerName)
+
+        let burgerImage = document.createElement("img")
+        burgerImage.src = menu[burger].image
+
+        let burgerList = document.createElement("ul")
+        let burgerIngredients = document.createElement("li")
+        let IngtNode = document.createTextNode(menu[burger].ingredients)
+        burgerIngredients.appendChild(IngtNode)
+        burgerList.appendChild(burgerIngredients)
+
+        let burgerKcal = document.createElement("li")
+        let KcalNode = document.createTextNode(menu[burger].kcal)
+        burgerKcal.appendChild(KcalNode)
+        burgerList.appendChild(burgerKcal)
+
+        let burgerAllergies = document.createElement("li")
+        let AllNode = document.createTextNode(menu[burger].allergies)
+        burgerAllergies.appendChild(AllNode)
+        burgerList.appendChild(burgerAllergies)
+
+        burgerDiv.appendChild(burgerP)
+        burgerDiv.appendChild(burgerImage)
+        burgerDiv.appendChild(burgerList)
+        myElement.appendChild(burgerDiv)
+
     }
-}
+}*/

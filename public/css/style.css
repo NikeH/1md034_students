@@ -53,23 +53,20 @@ section {
     width: 100%;
 }
 
-.wrapper {
+#burgers {
     display: grid;
-    grid-gap: 100px;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    background-color: #fff;
+    text-align: center;
+    color: #444;
 }
 
-.burgerone {
-    grid-column: 1;
-    grid-row: 1;
+li {
+    text-align: left;
 }
 
-.burgertwo {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.burgerthree {
-    grid-column: 3;
-    grid-row: 1;
+img {
+    width: 50%;
+    height: 50%;
+    margin: auto;
 }
