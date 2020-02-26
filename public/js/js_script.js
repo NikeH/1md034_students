@@ -1,38 +1,23 @@
-for (let burger in menu) {
+let orderButton = document.getElementById('orderButton');
 
-    {
-        let myElement = document.getElementById("burgers");
+const myFunction = function() {
+    let name = document.getElementById('name');
+    let mail = document.getElementById('email');
+    let streetname = document.getElementById('streetname');
+    let housenr = document.getElementById('housenr');
+    let payment = document.getElementById('payment');
+    let genders = document.getElementsByName('gender');
 
-        console.log(myElement)
-        let burgerDiv = document.createElement("div")
-
-        let burgerP = document.createElement("p")
-        let burgerName = document.createTextNode(menu[burger].name)
-        burgerP.appendChild(burgerName)
-
-        let burgerImage = document.createElement("img")
-        burgerImage.src = menu[burger].image
-
-        let burgerList = document.createElement("ul")
-        let burgerIngredients = document.createElement("li")
-        let IngtNode = document.createTextNode(menu[burger].ingredients)
-        burgerIngredients.appendChild(IngtNode)
-        burgerList.appendChild(burgerIngredients)
-
-        let burgerKcal = document.createElement("li")
-        let KcalNode = document.createTextNode(menu[burger].kcal)
-        burgerKcal.appendChild(KcalNode)
-        burgerList.appendChild(burgerKcal)
-
-        let burgerAllergies = document.createElement("li")
-        let AllNode = document.createTextNode(menu[burger].allergies)
-        burgerAllergies.appendChild(AllNode)
-        burgerList.appendChild(burgerAllergies)
-
-        burgerDiv.appendChild(burgerP)
-        burgerDiv.appendChild(burgerImage)
-        burgerDiv.appendChild(burgerList)
-        myElement.appendChild(burgerDiv)
-
+    let gender;
+    for (let element in genders) {
+        if (genders[element].checked == true) {
+            gender = genders[element];
+        }
     }
+
+    let answer = [name.value, mail.value, streetname.value, housenr.value, payment.value, gender.value];
+    console.log(answer);
+
 }
+
+/*orderButton.addEventListener("click", myFunction);*/
