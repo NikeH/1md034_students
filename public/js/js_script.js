@@ -3,8 +3,8 @@ let orderButton = document.getElementById('orderButton');
 const myFunction = function() {
     let name = document.getElementById('name');
     let mail = document.getElementById('email');
-    let streetname = document.getElementById('streetname');
-    let housenr = document.getElementById('housenr');
+    //let streetname = document.getElementById('streetname');
+    //let housenr = document.getElementById('housenr');
     let payment = document.getElementById('payment');
     let genders = document.getElementsByName('gender');
 
@@ -15,7 +15,7 @@ const myFunction = function() {
         }
     }
 
-    let answer = [name.value, mail.value, streetname.value, housenr.value, payment.value, gender.value];
+    let answer = [name.value, mail.value, payment.value, gender.value];
     console.log(answer);
 
 }

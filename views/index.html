@@ -5,10 +5,12 @@
     <title>ordering burgers</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="/socket.io/socket.io.js" defer></script>
     <script src="https://vuejs.org/js/vue.js" defer></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
+
 </head>
 
 <body>
@@ -55,12 +57,12 @@
                 <label for="email">E-mail</label><br>
                 <input v-model="email" type="email" id="email" name="em" required="required" placeholder="E-mail address"><br>
 
-                <label for="streetname">Street</label><br>
+                <!--<label for="streetname">Street</label><br>
                 <input v-model="streetname" type="text" id="streetname" name="st" required="required" placeholder="Street name"><br>
 
                 <label for="housenr">House</label><br>
                 <input v-model="housenr" type="number" id="housenr" name="hn" required="required" placeholder="House number"><br>
-
+                    -->
                 <label for="payment">Payment options</label><br>
                 <select v-model="payment" name="pym" id="payment">
                         <option selected>Credit card</option>
@@ -75,11 +77,18 @@
                 <input type="radio" v-model="gender" value="male" name="gender"> Male<br>
                 <input type="radio" v-model="gender" value="nonbinary" name="gender"> Non-binary<br>
                 <input type="radio" v-model="gender" value="undisclosed" name="gender" checked>Undisclosed<br>
+                <div class="view-box">
+                    <div id="dots" v-on:click="addOrder">
+                        <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                            {{key}}
+                        </div>
+                    </div>
+                </div>
 
             </form>
 
             <button v-on:click="submit()" type="button" id="orderButton" style="width:100px;height:50px;"><img src="https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif"/> Place my order</button><br>
-            <span>Customer info:<br> {{name}}<br> {{email}} <br>{{streetname}}<br> {{housenr}} <br> {{payment}}<br> {{gender}}</span>
+            <span>Customer info:<br> {{name}}<br> {{email}}<br> {{payment}}<br> {{gender}}</span>
             <p v-for="item in burgers">{{item}}</p>
 
         </section>
