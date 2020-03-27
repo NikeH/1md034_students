@@ -76,18 +76,18 @@
                 <input type="radio" v-model="gender" value="female" name="gender">Female<br>
                 <input type="radio" v-model="gender" value="male" name="gender"> Male<br>
                 <input type="radio" v-model="gender" value="nonbinary" name="gender"> Non-binary<br>
-                <input type="radio" v-model="gender" value="undisclosed" name="gender" checked>Undisclosed<br>
+                <input type="radio" v-model="gender" value="undisclosed" name="gender" checked> Undisclosed<br>
                 <div class="view-box">
-                    <div id="dots" v-on:click="addOrder">
-                        <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                            {{key}}
+                    <div id="dots" v-on:click="displayOrder">
+                        <div v-bind:style="{ left: localOrder.details.x + 'px', top: localOrder.details.y + 'px'}">
+                            T
                         </div>
                     </div>
                 </div>
 
             </form>
 
-            <button v-on:click="submit()" type="button" id="orderButton" style="width:100px;height:50px;"><img src="https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif"/> Place my order</button><br>
+            <button v-on:click="addOrder" type="button" id="orderButton" style="width:100px;height:50px;"><img src="https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif"/> Place my order</button><br>
             <span>Customer info:<br> {{name}}<br> {{email}}<br> {{payment}}<br> {{gender}}</span>
             <p v-for="item in burgers">{{item}}</p>
 
