@@ -70,7 +70,8 @@ const vmOne = new Vue({
                     x: this.localOrder.details.x,
                     y: this.localOrder.details.y
                 },
-                orderItems: this.burgers
+                orderItems: this.burgers,
+                infoArray: [this.name, this.email, this.payment, this.gender]
             });
         },
         displayOrder: function(event) {

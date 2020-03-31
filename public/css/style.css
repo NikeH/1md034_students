@@ -6,19 +6,23 @@ body {
 }
 
 .allergi {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 #wrapper {
-    background-color: #000000;
-    color: #ffffff;
-    border: 20px dotted #fadadf;
+    background-color: white;
+    color: #000000;
+    border: 10px dotted #000000;
     padding: 10px;
 }
 
 #customerinfo {
-    border: 20px double lightgreen;
+    border: 10px double black;
     padding: 10px;
+}
+
+#last {
+    padding: 25px;
 }
 
 button {
@@ -57,7 +61,6 @@ section {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     background-color: #fff;
-    text-align: center;
     color: #444;
 }
 
@@ -66,8 +69,8 @@ li {
 }
 
 img {
-    width: 40%;
-    height: 40%;
+    width: auto;
+    height: 200px;
     margin: auto;
 }
 
@@ -99,6 +102,11 @@ img {
     width: 20px;
     height: 20px;
     text-align: center;
+}
+
+#orderButton {
+    height: 40px;
+    width: auto;
 }
 
 footer {
